@@ -22,6 +22,10 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       background-color: var(--primary-color);
       color: var(--text-color);
@@ -35,7 +39,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 2vw;
     }
 
     header {
@@ -51,22 +55,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2rem;
+      padding: 2vh 3vw;
     }
 
     .logo {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.8rem;
+      font-size: 2.5vh;
       font-weight: 700;
       color: var(--accent-color);
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.2vw;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      gap: 2vw;
     }
 
     .nav-links li {
@@ -77,8 +81,8 @@
       color: var(--text-color);
       text-decoration: none;
       font-weight: 400;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
+      font-size: 1.8vh;
+      padding: 1vh 1.5vw;
       border-radius: 8px;
       transition: all 0.3s ease;
       position: relative;
@@ -110,19 +114,19 @@
       background-color: var(--secondary-color);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      min-width: 200px;
-      padding: 0.5rem 0;
+      min-width: 15vw;
+      padding: 1vh 0;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
       animation: fadeIn 0.3s ease-out;
     }
 
-    .nav-links li:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu {
       display: block;
     }
 
     .dropdown-menu li a {
       display: block;
-      padding: 0.75rem 1.5rem;
+      padding: 1.5vh 2vw;
       white-space: nowrap;
       transition: background-color 0.2s;
     }
@@ -130,16 +134,20 @@
     .dropdown-menu li a:hover {
       background-color: rgba(0, 230, 230, 0.1);
     }
-
+    
+    .mobile-menu-toggle {
+      display: none;
+    }
+    
     main {
       flex: 1;
-      padding: 4rem 2rem;
+      padding: 4vh 2vw;
       position: relative;
     }
     
     .page-content {
       background-color: var(--secondary-color);
-      padding: 3rem;
+      padding: 4vh;
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -147,7 +155,7 @@
 
     .hero-section {
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 10vh 2vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -158,55 +166,55 @@
 
     .hero-section h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
+      font-size: 6vh;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 2vh;
       color: var(--accent-color);
       text-shadow: 0 0 10px var(--accent-color);
     }
 
     .hero-section p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 2.2vh;
+      max-width: 60vw;
       line-height: 1.6;
-      margin-bottom: 2rem;
+      margin-bottom: 4vh;
       color: rgba(230, 240, 255, 0.8);
     }
     
     .section-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.5rem;
+      font-size: 4vh;
       font-weight: 700;
       color: var(--accent-color);
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 4vh;
       text-shadow: 0 0 8px rgba(0, 230, 230, 0.5);
     }
 
     .card-grid {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2vw;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .card {
       background-color: var(--primary-color);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 2rem;
+      padding: 3vh;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 230, 230, 0.1);
+      transform: translateY(-1vh);
+      box-shadow: 0 1.5vh 3vh rgba(0, 230, 230, 0.1);
     }
 
     .card h3 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
+      font-size: 2.5vh;
       color: var(--accent-color);
-      margin-bottom: 1rem;
+      margin-bottom: 2vh;
     }
 
     .list-items {
@@ -216,7 +224,7 @@
 
     .list-items li {
       border-bottom: 1px solid var(--border-color);
-      padding: 1rem 0;
+      padding: 2vh 0;
       transition: background-color 0.3s;
     }
 
@@ -232,42 +240,42 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: 2vw;
+      margin-top: 4vh;
     }
 
     .social-links a {
       color: var(--text-color);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 2.2vh;
       transition: color 0.3s ease, transform 0.3s ease;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1vh;
     }
 
     .social-links a:hover {
       color: var(--accent-color);
-      transform: translateY(-5px);
+      transform: translateY(-0.5vh);
     }
 
     footer {
       background-color: var(--secondary-color);
       color: var(--text-color);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
+      padding: 3vh 2vw;
+      font-size: 1.8vh;
       border-top: 1px solid var(--border-color);
     }
 
     .footer-links {
-      margin-top: 1rem;
+      margin-top: 2vh;
     }
 
     .footer-links a {
       color: rgba(230, 240, 255, 0.7);
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1vw;
       transition: color 0.3s ease;
     }
 
@@ -282,7 +290,7 @@
     }
 
     @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
+      from { transform: translateY(2vh); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
@@ -291,42 +299,59 @@
       .navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1.5rem;
+        padding: 3vh 2vw;
       }
 
       .nav-links {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1vh;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 2vh;
         display: none; /* Hidden by default for mobile */
+      }
+      
+      .nav-links.active {
+        display: flex;
       }
 
       .nav-links a {
-        padding: 1rem;
+        padding: 2vh 2vw;
         width: 100%;
         border-radius: 0;
       }
       
       .dropdown-menu {
-        position: static;
+        position: relative;
         width: 100%;
+        min-width: unset;
         border: none;
         border-radius: 0;
         background-color: rgba(26, 42, 58, 0.5);
       }
       
-      .dropdown:hover .dropdown-menu {
+      .dropdown-menu.active {
         display: block;
       }
-
+      
+      .dropdown-menu li a {
+        padding-left: 4vw;
+      }
+      
       .mobile-menu-toggle {
         display: block;
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 4vh;
         position: absolute;
-        right: 1.5rem;
-        top: 1.5rem;
+        right: 2vw;
+        top: 2vh;
+      }
+      
+      .hero-section h1 {
+        font-size: 4vh;
+      }
+
+      .hero-section p {
+        font-size: 2vh;
       }
     }
   </style>
@@ -340,7 +365,7 @@
       <ul class="nav-links">
         <li><a href="#" data-page="home">Home</a></li>
         <li class="dropdown">
-          <a href="#" data-page="courses">Courses</a>
+          <a href="#" class="dropdown-toggle" data-page="courses">Courses</a>
           <ul class="dropdown-menu">
             <li><a href="#" data-page="courses">CSS</a></li>
             <li><a href="#" data-page="courses">PMS</a></li>
@@ -448,7 +473,7 @@
             <p>Our digital operations are supported by a passionate and skilled tech team:</p>
             <ul class="list-items">
               <li><strong>Miss Anisa</strong> – Social Accounts Manager & Strategist: Plans and manages all digital communication campaigns, aligning posts with academic seasons, exam cycles, and course trends to boost engagement and relevance.</li>
-              <li><strong>Usman</strong> – Web Developer & Git Commander: Architect of the City College website, ensuring smooth development, updates, and version control across platforms with technical precision.</li>
+              <li><strong>Usman</strong> – Web Developer & Git Commander: Architect of the City College website , ensuring smooth development, updates, and version control across platforms with technical precision.</li>
             </ul>
           </div>
         `
@@ -479,6 +504,7 @@
     const navLinks = document.querySelector('.nav-links');
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const pageLinks = document.querySelectorAll('[data-page]');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
 
     // Function to load page content
     function loadPage(pageName) {
@@ -488,7 +514,7 @@
         
         // Remove existing content with a fade-out effect
         mainContent.style.opacity = '0';
-        mainContent.style.transform = 'translateY(20px)';
+        mainContent.style.transform = 'translateY(2vh)';
         
         setTimeout(() => {
           mainContent.innerHTML = pages[pageName].content;
@@ -530,6 +556,15 @@
     // Mobile menu toggle
     mobileMenuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    // Dropdown menu toggle
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdownMenu = dropdownToggle.nextElementSibling;
+      if (window.innerWidth <= 768) {
+        dropdownMenu.classList.toggle('active');
+      }
     });
 
     // Initial page load based on URL hash or default to home
